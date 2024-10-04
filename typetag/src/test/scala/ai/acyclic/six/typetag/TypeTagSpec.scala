@@ -1,8 +1,8 @@
 package ai.acyclic.six.typetag
 
-import org.scalatest.funspec.AnyFunSpec
+import org.tribbloid.scaffold.BaseSpec
 
-class TypeTagSpec extends AnyFunSpec {
+class TypeTagSpec extends BaseSpec {
   import TypeTagSpec.*
 
   describe("TypeTag") {
