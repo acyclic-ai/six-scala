@@ -1,13 +1,7 @@
 //val versions = gradle.rootProject.versions()
 
-
-include(":lightweight-dependency")
-project(":lightweight-dependency").projectDir = file("lightweight-dependency/module")
-include(":lightweight-dependency:core")
-include(":lightweight-dependency:extra")
-
-include(":core")
-include(":extra")
+include(":typetag")
+include(":unused")
 
 pluginManagement.repositories {
     gradlePluginPortal()
