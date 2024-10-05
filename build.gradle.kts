@@ -21,7 +21,7 @@ idea {
 
         excludeDirs = excludeDirs + listOf(
 
-            file("lightweight-dependency")
+//            file("lightweight-dependency")
         )
     }
 }

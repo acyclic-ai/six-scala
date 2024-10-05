@@ -2,5 +2,5 @@ val vs = versions()
 
 dependencies {
 
-    api(project(":typetag"))
+    api(project(":six:typetag"))
 }

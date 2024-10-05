@@ -1,7 +1,12 @@
 //val versions = gradle.rootProject.versions()
 
-include(":typetag")
-include(":unused")
+include("six")
+project(":six").projectDir = file("module")
+
+include(
+    ":six:typetag",
+    ":six:unused"
+)
 
 pluginManagement.repositories {
     gradlePluginPortal()
