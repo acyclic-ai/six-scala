@@ -1,2 +1,1 @@
-# scaffold-gradle-kts
-scaffold
+# interop infra for Scala 3 upgrade
