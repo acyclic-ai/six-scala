@@ -5,7 +5,8 @@ project(":six").projectDir = file("module")
 
 include(
     ":six:typetag",
-    ":six:unused"
+    ":six:unused",
+    ":six:spark"
 )
 
 pluginManagement.repositories {
