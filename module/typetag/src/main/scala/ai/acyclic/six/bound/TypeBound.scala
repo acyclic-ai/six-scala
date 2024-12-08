@@ -16,13 +16,13 @@ trait TypeBound extends Erased {
     * but it has the extra benefit of making Min & Max accessible, which is not possible in before
     */
 
-  type Min <: Max
-  type Max
+  type Min
+  type Max >: Min
 
   type Range >: Min <: Max
 
-  type Lt = TypeBound.Lt[this.Min, this.Max]
-  type Gt = TypeBound.Gt[this.Min, this.Max]
+  type Less = TypeBound.Lt[this.Min, this.Max]
+  type More = TypeBound.Gt[this.Min, this.Max]
 }
 
 object TypeBound {
@@ -48,6 +48,23 @@ object TypeBound {
   type Top = K[Nothing, Any]
   val Top: Top = Erased()
 
-  type Exact[T] = K[T, T]
-  type |[T] = Exact[T]
+  type Pinpoint = TypeBound { type Max = Min }
+  type |[T] = Pinpoint { type Min = T }
+
+  trait __Sanity {
+
+    val maxBound: TypeBound
+
+    type Bound = maxBound.Less & TypeBound.Pinpoint
+
+    {
+      val less: maxBound.Less = ???
+      implicitly[less.Max <:< maxBound.Max]
+    }
+
+    {
+      val less: maxBound.Less & TypeBound.Pinpoint = ???
+      implicitly[less.Max <:< maxBound.Max]
+    }
+  }
 }
