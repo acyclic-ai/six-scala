@@ -10,7 +10,5 @@ class Sanity extends SparkUnitTest {
       .reduce(_ + _)
 
     assert(r == 338350)
-
   }
-
 }
