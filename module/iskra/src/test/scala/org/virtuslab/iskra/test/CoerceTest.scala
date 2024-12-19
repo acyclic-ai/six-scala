@@ -2,6 +2,7 @@ package org.virtuslab.iskra
 package test
 
 import org.scalatest.funsuite.AnyFunSuite
+import org.virtuslab.iskra.types.*
 
 class CoerceTest extends AnyFunSuite:
   test("coerce-int-double") {

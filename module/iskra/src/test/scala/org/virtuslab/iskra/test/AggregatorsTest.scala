@@ -2,6 +2,7 @@ package org.virtuslab.iskra.test
 
 class AggregatorsTest extends SparkUnitTest:
   import org.virtuslab.iskra.api.*
+  import functions.*
 
   case class Foo(string: String, int: Int, intOpt: Option[Int], float: Float, floatOpt: Option[Float])
 
