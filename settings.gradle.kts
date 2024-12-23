@@ -5,6 +5,7 @@ project(":six").projectDir = file("module")
 
 include(
     ":six:typetag",
+//    ":six:graph",
     ":six:unused",
     ":six:spark"
 )
