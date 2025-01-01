@@ -4,10 +4,11 @@ include("six")
 project(":six").projectDir = file("module")
 
 include(
-    ":six:typetag",
-    ":six:graph",
-    ":six:unused",
-    ":six:spark"
+    ":six:spike",
+//    ":six:typetag",
+//    ":six:graph",
+//    ":six:unused",
+//    ":six:spark"
 )
 
 pluginManagement.repositories {
