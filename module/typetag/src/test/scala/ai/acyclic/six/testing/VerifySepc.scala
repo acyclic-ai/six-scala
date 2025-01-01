@@ -16,13 +16,13 @@ class VerifySepc extends BaseSpec {
 
   it("type assignment error") {
 
-    Verify.mustHaveTypeErrors("1: String")
+    Verify.assertTypeError("1: String")
 
-    Verify.mustHaveTypeErrors("1: Int")
+    Verify.assertTypeError("1: Int")
   }
 
   it("implicit error") {
 
-    Verify.mustHaveTypeErrors("summon[Int <:< String]")
+    Verify.assertTypeError("summon[Int <:< String]")
   }
 }
