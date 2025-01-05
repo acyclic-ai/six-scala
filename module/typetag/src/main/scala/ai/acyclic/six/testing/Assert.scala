@@ -1,9 +1,9 @@
 package ai.acyclic.six.testing
 
-object Verify {
+object Assert {
   import scala.compiletime.testing
 
-  inline infix def mustHaveTypeErrors(inline code: String): Unit = {
+  inline infix def typeError(inline code: String): Unit = {
 
     val errors = testing.typeCheckErrors(code)
 

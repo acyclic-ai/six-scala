@@ -4,7 +4,7 @@ import org.tribbloid.scaffold.BaseSpec
 
 import scala.compiletime.testing.typeCheckErrors
 
-class VerifySepc extends BaseSpec {
+class AssertSepc extends BaseSpec {
 
   it("sanity") {
 
@@ -16,13 +16,13 @@ class VerifySepc extends BaseSpec {
 
   it("type assignment error") {
 
-    Verify.mustHaveTypeErrors("1: String")
+    Assert.typeError("1: String")
 
-    Verify.mustHaveTypeErrors("1: Int")
+    Assert.typeError("1: Int")
   }
 
   it("implicit error") {
 
-    Verify.mustHaveTypeErrors("summon[Int <:< String]")
+    Assert.typeError("summon[Int <:< String]")
   }
 }
