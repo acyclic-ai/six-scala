@@ -1,4 +1,4 @@
-package ai.acyclic.six.testing
+package ai.acyclic.six.verification
 
 object Assert {
   import scala.compiletime.testing
