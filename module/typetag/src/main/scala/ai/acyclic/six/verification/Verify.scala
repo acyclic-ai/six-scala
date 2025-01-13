@@ -1,6 +1,6 @@
 package ai.acyclic.six.verification
 
-object Assert {
+object Verify {
   import scala.compiletime.testing
 
   inline infix def typeError(inline code: String): Unit = {
