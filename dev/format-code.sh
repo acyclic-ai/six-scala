@@ -8,3 +8,5 @@ cd "${FWDIR}" || exit
  # consumes too much memory to run in parallel
 
 scalafmt
+
+"${FWDIR}"/gradlew clean scalafix -Dorg.gradle.parallel=false
