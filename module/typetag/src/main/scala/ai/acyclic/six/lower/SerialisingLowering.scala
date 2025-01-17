@@ -1,7 +1,5 @@
 package ai.acyclic.six.lower
 
-import java.io.{ByteArrayInputStream, ByteArrayOutputStream, ObjectInputStream, ObjectOutputStream}
-import java.util.Base64
 import scala.quoted.*
 
 trait SerialisingLowering[T] extends ToExpr[T] {
