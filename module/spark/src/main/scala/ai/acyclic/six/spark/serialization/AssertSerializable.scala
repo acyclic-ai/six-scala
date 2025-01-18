@@ -40,11 +40,23 @@ case class AssertSerializable[T <: Any](
       case Failure(ee) => ee
     }
 
-    if (errors.nonEmpty) throw new RuntimeException(s"multiple errors [${errors.size}]", errors.head) {
+    if (errors.nonEmpty)
+      throw new AssertionError(
+        {
+          val header = s"multiple errors [${errors.size}]\n"
+          val body = errors
+            .map { e =>
+              "- " + e.getMessage
+            }
+            .mkString("\n")
+          header + body
+        },
+        errors.head
+      ) {
 
-      val causes: Seq[Throwable] = errors
+        val causes: Seq[Throwable] = errors
 
-    }
+      }
   }
 
   def weakly(): Unit = {
